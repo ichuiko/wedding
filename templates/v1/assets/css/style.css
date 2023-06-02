@@ -1,0 +1,1027 @@
+html{
+    font-size:62.5%;
+    scroll-behavior: smooth;
+}
+
+/*@font-face {
+    font-family: "Mix";
+    src: url("../fonts/The\ Mix-\ Regular.ttf") format("ttf"),
+        url("../fonts/The\ Mix-\ Bold.ttf") format("ttf"),
+        url("../fonts/The\ Mix-\ Italic.ttf") format("ttf"),
+        url("../fonts/The\ Mix-\ ItalicBold.ttf") format("ttf");
+         
+  }*/
+
+  @font-face {
+    font-family: 'Mix Regular';
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/The Mix- Regular.ttf") format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Mix Bold';
+    font-style: normal;
+    font-weight: 900;
+    src: url("../fonts/The Mix- Bold.ttf") format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Futura PT';
+    src:url('FuturaPT-LightObl.woff2') format('woff2');
+    font-weight: 400;
+    font-style: italic;
+}
+
+:root{
+    --main-text-font-family:'Lora', serif;
+    --icons-text-font-family:'Futura PT, Arial, san-serif';
+    --logoletters-font-family:'Luxurious Script', cursive;
+    --namestext-font-family:'Playfair Display SC', serif;
+    --cursivetitles-font-family:'Comforter Brush', cursive;
+}
+
+body{
+    margin:0;
+    padding:0;
+    font:var(--main-text-font-family);
+    background-color:#F7F7F5;
+    font-size:1.8rem;
+}
+*,
+*:before,
+*:after{
+    box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin:0;
+}
+
+p{
+    margin:0;
+}
+
+.wrapper{
+    display:grid;
+    width:39rem;
+    grid-template-columns: 2rem 1fr 2rem;
+    margin:0 auto;
+    grid-template-areas: "mainBlock mainBlock mainBlock"
+                         ". newEra ."
+                         "invitation invitation invitation"
+                         ". calender ."
+                         "mapBlock mapBlock mapBlock"
+                         "programmBlock programmBlock programmBlock"
+                         ". style ."
+                         "happyWait happyWait happyWait"
+                         "timerBlock timerBlock timerBlock"
+                         "weddingManagerBlock weddingManagerBlock weddingManagerBlock"
+                         ". formBlock ."
+                         "centerEndBlockFlowers centerEndBlockFlowers centerEndBlockFlowers";
+}
+
+
+
+/*Menu*/
+
+.menu{
+    width:39rem;
+    height:6rem;
+    background-color:#fff;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:0 2rem 0 2rem;
+    box-shadow: 0rem 0.2rem 0.2rem rgba(184, 180, 180, 0.3);
+    position:fixed;
+    z-index:10000;
+}
+.navMenu{
+    line-height:2.8rem;
+}
+
+.navMenuTitle{
+    text-decoration: none;
+    color:#000;
+}
+
+.iconsBlock{
+    display:flex;
+    align-items: center;
+    margin-top:0.5rem;
+}
+
+.musciBlock{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right:1.5rem;
+}
+.musicButton{
+    width:2.5rem;
+    height:2.5rem;
+    margin-bottom:0.2rem;
+    cursor:pointer;
+}
+
+.musicButton-title{
+    font-family: var(--icons-text-font-family);
+    font-size:1rem;
+    line-height:0;
+    margin-top:1.2rem;
+}
+
+.burgerMenu{
+    cursor:pointer;
+    padding-top:0.3rem;
+}
+.burger-icon{
+    display:block;
+    width:3rem;
+    height:0.3rem;
+    margin:0 0 0.5rem 0;
+    background-color:#000;
+}
+
+.burgerMenu-icons{
+    display:flex;
+    flex-direction: column;
+}
+
+.burgerMenu-items{
+    position:absolute;
+    top:0;
+    left:100%;
+    visibility: hidden;
+    width:30rem;
+    height:100vh;
+    z-index:1200;
+    background-color:#fff;
+    padding-top:4.2rem;
+    transition: left .3s;
+}
+
+.open{
+    visibility: visible;
+    left:23%;
+}
+
+.burgerMenu-itemsText{
+    list-style: none;
+    font-size:1.8rem;
+    text-transform: uppercase;
+    text-align: center;
+    line-height:2;
+}
+
+li>a{
+    color:#000;
+    text-decoration: none;
+}
+
+.active{
+    text-decoration: underline;
+    text-underline-offset: 0.4rem;;
+    color:#4d4d4d;
+    opacity:0.8;
+}
+/*Title*/
+
+.mainBlock{
+   grid-area:mainBlock;
+   background-image: url("../images/main.png");
+   background-size: 140%;
+   background-position:-5rem 9rem;
+   background-repeat: no-repeat;
+   width:100%;
+   height:100vh;
+   display:flex;
+   flex-direction: column;
+   position:relative;
+   z-index:100;
+}
+
+.mainBlockOutline{
+    position:absolute;
+    top:27%;
+    left:7%;
+    width:34rem;
+    height:34rem;
+    border-radius:50%;
+    background-color:#F7F7F5;
+    opacity:0.7;
+    z-index:900;
+}
+
+.mainBlock-text{
+    position:absolute;
+    top:30%;
+    left:12%;
+    width:30rem;
+    height:30rem;
+    /*outline: 1.3rem solid rgba(228, 227, 227, 0.5);*/
+    border-radius:50%;
+    margin:0 auto;
+    background-color:#F7F7F5;
+    z-index:1000;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height:1.1;
+}
+
+.logo{
+    font-family: var(--logoletters-font-family);
+    font-size:10rem;
+    font-weight:100;
+    margin-top:-2rem;
+    animation-name: scaleText;
+    animation-duration: 2s;
+}
+
+@keyframes scaleText{
+    from{transform:scale(1.65); opacity:0;}
+    to{transform:scale(1); opacity:1;}
+}
+
+.logoName{
+    font-size:3rem;
+    font-family: var(--namestext-font-family);
+    letter-spacing: 3px;
+    opacity:0;
+    animation: scaleTextTitle 2s ease-in-out forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes scaleTextTitle{
+    from{transform:scale(1.65); opacity:0;}
+    to{transform:scale(1); opacity:1;}
+}
+
+.date{
+    opacity:0;
+    animation: scaleTextDate 2s ease-in-out forwards;
+    animation-delay: 1s;
+}
+
+@keyframes scaleTextDate{
+    from{transform:scale(1.65); opacity:0;}
+    to{transform:scale(1); opacity:1;}
+}
+
+.mainBlock-text :last-child{
+    margin-top:2rem;
+}
+
+.symbol{
+    font-size:2.5rem;
+    color:#9A9A98;
+}
+
+.arrowTop{
+    font-size:2rem;
+    position:absolute;
+    bottom:0;
+    left:50%;
+    transform:translateX(-50%);
+    z-index:1000;
+}
+
+/*New Era*/
+.newEra{
+    grid-area: newEra;
+    text-align: center;
+    font-family: var(--cursivetitles-font-family);
+    font-size: 5rem;;
+}
+
+.endBlockImage{
+    display:block;
+    margin:0 auto;
+    width:17.8rem;
+    margin-top:3rem;
+}
+
+/*Invitation*/
+
+.invitation{
+    grid-area: invitation;
+    overflow: hidden;
+    position:relative;
+    z-index:100;
+}
+
+.invitationBackgroundImage{
+    width:120%;
+    transform:rotate(-30deg) translateX(-11rem) translateY(-9rem);
+    opacity:0.2;
+}
+
+.invitationFlowers{
+    width:130%;
+    overflow-x: hidden;
+    transform:rotate(145deg) translateY(8rem) translateX(-8rem);
+}
+
+.invitationTitle{
+    position:absolute;
+    top:8%;
+    font-family: var(--cursivetitles-font-family);
+    font-size:5rem;
+    text-align: center;
+    letter-spacing: 5px;
+    z-index:1000;
+}
+
+.invitationText{
+    width:30rem;
+    position:absolute;
+    top:33%;
+    left:50%;
+    transform: translateX(-50%);
+    display:block;
+    text-align: center;
+    font-family: var(--namestext-font-family);
+    font-size:1.5rem;
+    line-height:2.1rem;
+    letter-spacing: 1.5px;
+    margin-bottom:2rem;
+    z-index:1000;
+}
+
+.finishedText{
+    top:52%;
+}
+
+.dateText{
+    width:30rem;
+    top:58%;
+    left:50%;
+    transform: translateX(-50%);
+}
+
+.placeText{
+    top:70%;
+    left:50%;
+    transform: translateX(-50%);
+    font-size:1.8rem;
+}
+
+
+/*Calender*/
+.calender{
+    grid-area:calender;
+    position: relative;
+    z-index:100;
+}
+
+.calenderTitle{
+    margin-top:5rem;
+    margin-bottom:3rem;
+    font-family: var(--cursivetitles-font-family);
+    font-size:5rem;
+    text-align: center;
+    letter-spacing: 5px;
+}
+
+.calenderDays{
+    width:75%;
+    margin: 0 auto;
+    text-align: end;
+    line-height: 1.5;
+}
+
+.calenderRow{
+    position: relative;
+    left:-2%;
+}
+
+.calenderHeart{
+    width:4.6rem;
+    position:absolute;
+    top:40%;
+    right:20%;
+    opacity:0;
+    animation: scaleCalenderHeart 2s ease-in-out forwards;
+    animation-delay: 0.5s;
+    z-index:1000;
+}
+
+@keyframes scaleCalenderHeart{
+    from{transform:scale(1.65); opacity:0;}
+    to{transform:scale(1); opacity:1;}
+}
+
+.calenderEndBlockImage{
+    display:block;
+    margin:0 auto;
+    width:17.8rem;
+    margin-top:8rem;
+}
+
+/*Map*/
+.mapBlock{
+    grid-area:mapBlock;
+}
+
+.mapText{
+    display:block;
+    width:32rem;
+    margin: 0 auto;
+    text-align: center;
+    font-family: var(--namestext-font-family);
+    font-size:1.5rem;
+    line-height:2.1rem;
+    letter-spacing: 1.5px;
+    margin-bottom:2rem;
+}
+
+.mapSection{
+    display:flex;
+    box-shadow: 0rem 0.5rem 0.5rem rgba(184, 180, 180, 0.3);
+    justify-content: space-around;
+    margin-bottom:8rem;
+}
+
+/*Programm*/
+
+.programmBlock{
+    grid-area:programmBlock;
+    position:relative;
+    z-index:100;
+    overflow: hidden;
+}
+
+.programmBlockFlowers{
+    position:absolute;
+    top:-2rem;
+    left:6rem;
+    width:125%;
+    height:auto;
+    transform:rotate(30deg);
+    opacity:0.2;
+    z-index:-1;
+}
+
+.programmBlockFlowersColor{
+    width:125%;
+    height:auto;
+    opacity:0.9;
+}
+
+.programmBlockLine{
+    width:10rem;
+    height:0.05rem;
+    border:none;
+    background-color:#000;
+    margin-bottom:8rem;
+}
+
+.programmBlockTitle{
+    width:30rem;
+    text-align: center;
+    margin:0 auto;
+    font-family: var(--cursivetitles-font-family);
+    font-size:5rem;
+    letter-spacing: 5px;
+    margin-bottom:4rem;
+}
+
+.programBlockIcons{
+    position:relative;
+    display:flex;
+    justify-content: space-around;
+    z-index:100;
+}
+
+.programBlockLine{
+    position:absolute;
+    height:68rem;
+    width:0.1rem;
+    border-color: #000;
+    top:13%;
+    left:50%;
+    z-index:1000;
+}
+
+.heart{
+    position:absolute;
+    top:13%;
+    left:48.5%;
+    width:1.4rem;
+    height:1.295rem;
+    z-index:1000;
+}
+
+.heartSecond{
+    position:absolute;
+    top:33%;
+    left:48.5%;
+    width:1.4rem;
+    height:1.295rem;
+    z-index:1000;
+}
+
+.heartThird{
+    position:absolute;
+    top:53%;
+    left:48.5%;
+    width:1.4rem;
+    height:1.295rem;
+    z-index:1000;
+}
+
+.heartFourth{
+    position:absolute;
+    top:73%;
+    left:48.5%;
+    width:1.4rem;
+    height:1.295rem;
+    z-index:1000;
+}
+
+.heartFifth{
+    position:absolute;
+    top:91%;
+    left:48.5%;
+    width:1.4rem;
+    height:1.295rem;
+    z-index:1000;
+}
+
+.programBlockColumn{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap:10rem;
+}
+
+.second{
+    padding-top:16rem;
+    padding-bottom:13rem;
+    justify-content: space-around;
+}
+
+.programmBlockItem{
+    width:14rem;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.programmBlockIcon{
+    width:9rem;
+    height:9rem;
+    border-radius:50%;
+    margin-bottom:1.2rem;
+}
+
+.programmBlockItemTitle{
+    width:14rem;
+    font-size:2.8rem;
+    text-align: center;
+    margin-bottom:1.3rem;
+}
+
+.programmBlockItemTextTitle{
+    width:13.5rem;
+    font-size:1.5rem;
+    text-align: center;
+    font-family: var(--namestext-font-family);
+    margin-bottom:1rem;
+}
+
+.programmBlockItemText{
+    font-size:1.4rem;
+    font-style: italic;
+    text-align: center;
+}
+
+/*Style*/
+.style{
+    grid-area:style;
+    margin-bottom:2rem;
+}
+
+.styleTitle{
+    margin-top:5rem;
+    margin-bottom:3rem;
+    font-family: var(--cursivetitles-font-family);
+    font-size:5rem;
+    text-align: center;
+    letter-spacing: 5px;
+}
+
+.styleText{
+    width:26rem;
+    display:block;
+    margin:0 auto;
+    text-align: center;
+    font-family: var(--namestext-font-family);
+    font-size:1.5rem;
+    line-height:2.1rem;
+    letter-spacing: 1.5px;
+    margin-bottom:2rem;
+}
+
+.styleIconsBlock{
+    width:25.8rem;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:0 auto;
+    margin-top:5rem;
+}
+
+.styleIcon{
+    display:block;
+    margin: 0 auto;;
+    width:7rem;
+    margin-bottom:3rem;
+}
+
+.styleIconBlock{
+    width:12.9rem;
+}
+.iconText{
+    width:12.9rem;
+    font-size:1.2rem;
+    line-height:1.2;
+}
+
+.styleTitleColorsText{
+    width:26rem;
+    display:block;
+    margin:0 auto;
+    text-align: center;
+    font-family: var(--namestext-font-family);
+    font-size:1.5rem;
+    line-height:2.1rem;
+    letter-spacing: 1.5px;
+    margin-bottom:2.5rem;
+}
+
+.styleColors{
+    text-align: center;
+}
+
+.styleBlack{
+    display:inline-block;
+    margin:0 auto;
+    width:5.5rem;
+    height:5.5rem;
+    border-radius: 50%;
+    background-color: #000;
+    margin-right:2.5rem;
+    opacity:0;
+    animation: scaleStyleBlack 2s ease-in-out forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes scaleStyleBlack{
+    from{transform:scale(0.1); opacity:0;}
+    to{transform:scale(1); opacity:1;}
+}
+
+
+.styleWhite{
+    display:inline-block;
+    margin:0 auto;
+    width:5.5rem;
+    height:5.5rem;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity:0;
+    animation: scaleStyleWhite 2s ease-in-out forwards;
+    animation-delay: 0.4s;
+}
+
+@keyframes scaleStyleWhite{
+    from{transform:scale(0.1); opacity:0;}
+    to{transform:scale(1); opacity:1;}
+}
+
+/*HappyWaitText*/
+.happyWait{
+    grid-area:happyWait;
+    position:relative;
+    z-index:100;
+    overflow:hidden;
+}
+
+.happyWaitFirstLine{
+    position:absolute;
+    top:13%;
+    left:50%;
+    transform:translateX(-50%);
+    width:10rem;
+    height:0.1rem;
+    background-color:#000;
+    border:none;
+    border-color:#9b9a9a;
+    z-index:1000;
+}
+
+.happyWaitText{
+    text-align:center;
+    width:30rem;
+    position: absolute;
+    top:28%;
+    left:50%;
+    transform:translateX(-50%);
+    font-family: var(--cursivetitles-font-family);
+    font-size:5rem;
+    line-height:1;
+    z-index:1000;
+}
+
+.happyWaitSecondLine{
+    position:absolute;
+    bottom:30%;
+    left:50%;
+    transform:translateX(-50%);
+    width:10rem;
+    height:0.1rem;
+    background-color:#000;
+    border:none;
+    border-color:#9b9a9a;
+    z-index:1000;
+}
+
+/*Timer Block*/
+
+.timerBlock{
+   margin-top:-5rem;
+   grid-area:timerBlock;
+   background-image: url("../images/pair2.jpg");
+   background-size: cover;
+   background-position: -2rem 0rem;
+   background-repeat: no-repeat;
+   width:100%;
+   height:100vh;
+   position:relative;
+   z-index:100;
+}
+
+.timer{
+    position:absolute;
+    bottom:7.5%;
+    left:50%;
+    transform:translateX(-50%);
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    color:#fff;
+    z-index:1000;
+}
+
+.timerDate{
+    font-size:2.5rem;
+    text-transform: uppercase;
+    font-weight:400;
+    text-align: center;
+    margin-bottom:2rem;
+}
+
+.timerNumbers{
+    width:23rem;
+    display:flex;
+    justify-content: space-between;
+    font-size:2.5rem;
+    margin-top:4rem;
+}
+
+.timerNumbersBlock{
+    padding-right:2rem;
+    border-right:0.1rem solid #fff;
+}
+
+
+.timerNumbers :last-child{
+    border-right:none;
+}
+
+.timerNumbersItemsText{
+    font-size:1.6rem;
+    margin-bottom:1rem;
+}
+
+
+/*Wedding manager*/
+
+.weddingManagerBlock{
+    grid-area:weddingManagerBlock;
+    height:100vh;
+    position:relative;
+    margin-top:3rem;
+    z-index:100;
+    overflow: hidden;
+}
+
+.weddingManagerBackground{
+    position:absolute;
+    top:-2rem;
+    left:6rem;
+    width:125%;
+    height:auto;
+    transform:rotate(30deg);
+    opacity:0.2;
+    z-index:-1;
+}
+
+.weddingManagerBlockLine{
+    display:block;
+    margin-top:8rem;
+    width:10rem;
+    height:0.1rem;
+    background-color:#000;
+    border:none;
+    border-color:#000;
+    margin-bottom:6rem;
+}
+
+.weddingManagerTitle{
+    font-family: var(--cursivetitles-font-family);
+    font-size:5rem;
+    text-align: center;
+    letter-spacing: 5px;
+    margin-bottom:6rem;
+}
+
+.weddingText{
+    width:27rem;
+    text-align: center;
+    margin: 0 auto;
+    font-family: var(--namestext-font-family);
+    font-size:1.5rem;
+    line-height:2.1rem;
+    letter-spacing: 1.5px;
+    margin-bottom:6rem;
+}
+
+.nameText{
+    font-size:3rem;
+    margin-bottom:4rem;
+}
+
+.phoneText{
+    font-family: var(--icons-text-font-family);
+    font-size:2.2rem;
+}
+
+/*Form Block*/
+
+.formBlock{
+    grid-area:formBlock;
+    margin-top:-5rem;
+    overflow: hidden;
+    position:relative;
+    z-index:100;
+}
+
+.formTitleText{
+    width:30rem;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0 auto;
+    font-family: var(--namestext-font-family);
+    font-size:1.7rem;
+    line-height:2.1rem;
+    letter-spacing: 1.5px;
+    margin-bottom:3.5rem;
+}
+
+.responceDateText{
+    width:19rem;
+    font-size:1.5rem;
+    text-transform: none;
+}
+
+.arrowDown{
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    z-index:1000;
+}
+
+#form{
+    margin-top:10rem;
+    font-family: var(--main-text-font-family);
+}
+
+#surname{
+    width:35rem;
+    height:6rem;
+    outline:none;
+    background:none;
+    border:none;
+    border-bottom:0.1rem solid #000;
+    font-family: var(--main-text-font-family);
+    font-size:1.6rem;
+}
+
+#nameText{
+    width:35rem;
+    height:6rem;
+    outline:none;
+    background:none;
+    border:none;
+    border-bottom:0.1rem solid #000;
+    font-family: var(--main-text-font-family);
+    font-size:1.6rem;
+    margin-top:0.5rem;
+}
+
+.choiceOption{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 3rem;
+}
+
+#choiceYes{
+    transform:scale(1.3);
+    margin-right:0.5rem;
+    margin-top:0.8rem;
+}
+
+#choiceNo{
+    transform:scale(1.3);
+    margin-right:0.5rem;
+}
+
+.choiceLabel{
+    font-size:1.2rem;
+}
+
+.error{
+    color:#F15B4D;
+    font-size:1.2rem;
+}
+
+.errorBlock{
+    width:100%;
+    margin-top:3rem;
+    color:#fff;
+    background-color:#F15B4D;
+    font-size:1.6rem;
+    line-height:1.45;
+    padding:2rem 1rem;
+    text-align:center;
+}
+
+#btn{
+    width:100%;
+    height:6rem;
+    border-radius: 3rem;
+    font-family: var(--main-text-font-family);
+    outline:none;
+    border:none;
+    background-color:#b3ccab;
+    color:#000;
+    margin-top:4rem;
+    margin-bottom:3rem;
+    font-size:1.6rem;
+    text-transform:uppercase;
+    cursor:pointer;
+}
+
+.formBlockFinishedText{
+    width:30rem;
+    text-align: center;
+    margin: 0 auto;
+    font-family: var(--namestext-font-family);
+    font-size:2rem;
+    line-height:2.1rem;
+    letter-spacing: 1.5px;
+    margin-top:8rem;
+    margin-bottom:6rem;
+}
+
+.formBlockTextNames{
+    font-family: var(--cursivetitles-font-family);
+    font-size:5rem;
+    text-align: center;
+    letter-spacing: 5px;
+    margin-bottom:10rem;
+}
+
+/*Center End Block Flowers*/
+.centerEndBlockFlowers{
+    grid-area:centerEndBlockFlowers;
+    position:relative;
+    height:25rem;
+    overflow: hidden;
+    z-index:100;
+}
+
+.formEndBlockFlowers{
+    width:125%;
+    position:absolute;
+    bottom:-13rem;
+    left:-5.5rem;
+    z-index:100;
+}
